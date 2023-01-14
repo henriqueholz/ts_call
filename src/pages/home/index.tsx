@@ -3,11 +3,13 @@ import Image from 'next/image'
 import { Container, Hero, Preview } from './styles'
 
 import previewImage from '../../assets/app-preview.png'
-import { ClaimUsernameForm } from '../components/ClaimUsernameForm'
+import { ClaimUsernameForm } from './components/ClaimUsernameForm'
 
 export default function Home() {
   return (
     <>
+      <div title="Descomplique sua agenda | Ignite Call" />
+
       <Container>
         <Hero>
           <Heading as="h1" size="4xl">
@@ -17,6 +19,7 @@ export default function Home() {
             Conecte seu calendário e permita que as pessoas marquem agendamentos
             no seu tempo livre.
           </Text>
+
           <ClaimUsernameForm />
         </Hero>
 
