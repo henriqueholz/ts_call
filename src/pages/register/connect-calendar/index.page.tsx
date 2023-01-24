@@ -16,6 +16,10 @@ export default function ConnectCalendar() {
     await signIn('google')
   }
 
+  async function handleNavigateToNextStep() {
+    await router.push('/register/time-intervals')
+  }
+
   return (
     <>
       <div title="Conecte sua agenda do Google | Ignite Call" />
@@ -57,7 +61,11 @@ export default function ConnectCalendar() {
             </AuthError>
           )}
 
-          <Button type="submit" disabled={!isSignedIn}>
+          <Button
+            onClick={handleNavigateToNextStep}
+            type="submit"
+            disabled={!isSignedIn}
+          >
             Próximo passo
             <ArrowRight />
           </Button>
